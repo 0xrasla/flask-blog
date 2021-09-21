@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titleblock %}
+
+{% if title %}
+<title> Blog | {{title}}</title>
+
+{% else %}
+
+<title> Blog | title</title>
+{% endif %}
+
+{% endblock titleblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Welcome to the ultimate blog</h1>
+    <a href="/blog/all_blogs">Start</a>
+</div>
+{% endblock body %}

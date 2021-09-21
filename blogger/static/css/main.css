@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Grechen Fuemen',cursive;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container a {
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 1s all;
+}
+
+.container a:hover {
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+}
+
+.card {
+   background-color: grey;
+   padding: 30px;
+   margin-bottom: 20px;
+   border-radius: 20px;
+   border: 2px solid white;
+   min-width: 400px;   
+   max-width: 300px;
+   transition: 1s all;
+}
+
+.card:hover {
+    transform: scale(1.052);
+    cursor: pointer;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 0;
+}
+
+.card p {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.card a {
+     color: black;
+     border: 2px solid white;
+     text-decoration: none;
+     padding: 4px;
+     background-color: grey;
+     border-radius: 10px;
+     transition: 1s all;
+     color: white;
+     margin-top: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 992px) {
+    main {
+        flex-direction: column; 
+    }
+}
+
+.container form input{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: 'Mulish',
+    sans-serif;
+}
+
+.container form p br {
+    margin-bottom: 5px;
+}
+
+.container form textarea {
+     background-color: black;
+     color: white;
+     border: 2px solid white;
+     padding: 4px;
+     border-radius: 10px;
+     font-family: 'Mulish',
+     sans-serif;
+     font-family: 10px;
+}
+
+.container #submit {
+    padding: 10px;
+    font-family: "Grechen Fuemen";
+    transition: .4s all;
+}
+
+.container #submit:hover {
+    background-color: white;
+    border: 2px solid grey;
+    color: black;
+    cursor: pointer;
+}
+
+.single {
+    font-size: 2em;
+}
+
+.single h1 {
+    text-align: center;
+}
+
+.single h2 {
+    font-size: 1em;
+}
+
+.single a {
+    font-family: .5em;
+}

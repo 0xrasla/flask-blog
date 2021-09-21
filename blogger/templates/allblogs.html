@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block titleblock %}
+
+{% if title %}
+<title> Blog | {{title}}</title>
+
+{% else %}
+
+<title> Blog | All Blogs</title>
+{% endif %}
+
+{% endblock titleblock %}
+
+{% block body %}
+<div class="container">
+    <h1>All Blogs</h1>
+    <div class="main">
+        {% if all%}
+        {% for i in all %}
+        <div class="card">
+            <h3>
+                {{i.title}}
+            </h3>
+            <h4>by : {{i.author}}</h4>
+            <p>
+                {{i.content[:33]}}...
+            </p>
+
+            <a href={{url_for("viewrecord", id=i.id)}}>View</a>
+            <a href={{url_for("deleterecord", id=i.id)}}>Delete</a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2>
+            There is no Blogs Made Yet!
+        </h2>
+        {% endif %}
+    </div>
+</div>
+{% endblock body %}

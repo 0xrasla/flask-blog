@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titleblock %}
+
+{% if title %}
+<title> Blog | {{title}}</title>
+
+{% else %}
+
+<title> Blog | Single Blog</title>
+{% endif %}
+
+{% endblock titleblock %}
+
+{% block body %}
+<div class="container">
+    <div class="single">
+        <h1>{{blog.title}}</h1>
+
+        <h2>Made by : {{blog.author}}</h2>
+
+        <p>
+            {{ blog.content}}
+        </p>
+
+        <a href={{ url_for("edit", id=blog.id) }}>Edit</a>
+    </div>
+</div>
+{% endblock body %}

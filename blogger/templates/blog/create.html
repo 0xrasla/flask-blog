@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block titleblock %}
+
+{% if title %}
+<title> Blog | {{title}}</title>
+
+{% else %}
+
+<title> Blog | Create New Blog</title>
+{% endif %}
+
+{% endblock titleblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Create New Post</h1>
+    <form action="/blog/create" method="post">
+
+        {{form.hidden_tag()}}
+
+        <p>
+            <label>
+                {{form.title.label}}
+            </label><br>
+            {{form.title(size=42)}}
+        </p>
+
+        <p>
+            <label>
+                {{form.author.label}}
+            </label> <br>
+            {{form.author(size=42)}}
+        </p>
+
+        <p>
+            <label>
+                {{form.content.label}}
+
+            </label> <br>
+            {{form.content(rows=10, cols=34)}}
+        </p>
+
+        <p>
+            {{form.submit()}}
+        </p>
+
+    </form>
+</div>
+{% endblock body %}
